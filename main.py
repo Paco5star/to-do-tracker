@@ -11,7 +11,7 @@ import os
 
 secret_key = secrets.token_hex(16)
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1692")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL1692", "postgresql://mugqacvwxivfpa:7a90c87c310f66a95f3097ca04e404dc4e6e2c5119c17948ab5c55794f6deb35@ec2-54-208-11-146.compute-1.amazonaws.com:5432/dan3kab6qhop80")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = secret_key
 db = SQLAlchemy(app)
