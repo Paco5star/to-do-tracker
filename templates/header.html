@@ -1,0 +1,33 @@
+
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a class="nav-link px-2">
+                <span class="title" style="font-size: 32px; color: #068FFF;">Personal </span>
+                <span class="title" style="font-size: 32px; color: #EEEEEE ;">To-Do <i class="fas fa-check" style="color: #068fff;"></i></span>
+            </a>
+            </li>
+              
+            </ul>
+    
+            
+            <div class="text-end">
+              {% if not User.is_authenticated() %}
+              <a href= "{{url_for('login')}}"type="button" class="btn btn-outline-light me-2">Login</a>
+              <a href="{{url_for('signup')}}" type="button" class="btn btn-custom">Sign-up</a>
+              {% endif %}
+              {% if User.is_authenticated() %}
+              <a href="{{ url_for('logout') }}" class="btn btn-custom">Logout</a>
+              {% endif %}
+              
+            </div>
+          </div>
+        </div>
+      </header>
+      
+        
