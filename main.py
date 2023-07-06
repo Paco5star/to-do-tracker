@@ -31,7 +31,7 @@ class User(db.Model):
         return self.password == password 
 
 
-    
+  
 
 class Task(db.Model):
     __tablename__ = 'tasks'
