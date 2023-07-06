@@ -11,7 +11,7 @@ import os
 
 secret_key = secrets.token_hex(16)
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URI1")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URI1692")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = secret_key
 db = SQLAlchemy(app)
